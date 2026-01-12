@@ -112,7 +112,7 @@
 <body class="bg-idle">
     <div class="container">
         <div class="phase-label" id="phaseLabel">Ready to Start?</div>
-        <div class="timer-display" id="timerDisplay">2:00</div>
+        <div class="timer-display" id="timerDisplay">3:00</div>
         <div class="button-group">
             <button class="btn start-btn" id="startBtn">Start Timer</button>
             <button class="btn stop-btn hidden" id="stopBtn">Stop</button>
@@ -136,10 +136,10 @@
 
         let timeRemaining = 0;
         let timerInterval = null;
-        let currentPhase = 0; // 0 = idle, 1 = phase 1 (2 min), 2 = phase 2 (3 min)
+        let currentPhase = 0; // 0 = idle, 1 = phase 1 (3 min), 2 = phase 2 (2 min)
 
-        const PHASE_1_DURATION = 2 * 60; // 2 minutes in seconds
-        const PHASE_2_DURATION = 3 * 60; // 3 minutes in seconds
+        const PHASE_1_DURATION = 3 * 60; // 3 minutes in seconds
+        const PHASE_2_DURATION = 2 * 60; // 2 minutes in seconds
 
         function formatTime(seconds) {
             const mins = Math.floor(seconds / 60);
